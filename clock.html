@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall Clock</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    .clock {
+        height: 400px;
+        width: 400px;
+        border: 20px solid black;
+        border-radius: 60%;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        transform: translate(-30%, -30%);
+        box-shadow: inset 0px 0px 10px;
+    }
+
+    .min_hand {
+        width: 190px;
+        height: 10px;
+        background-color: black;
+        position: absolute;
+        top: calc(50% - 5px);
+        /* calc function computes a mathematical expression requires proper spacing b/w each value and arithmatiic operator */
+        left: 50%;
+        border-radius: 5px;
+    }
+
+    .hour_hand {
+        width: 150px;
+        height: 10px;
+        border-radius: 5px;
+        background-color:black;
+        position: absolute;
+        top: calc(50% - 5px);
+        left: 50%;
+
+        transform: rotate(90deg);
+        transform-origin: left;
+    }
+
+    .center {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #04fce7;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+</style>
+
+<body>
+    <div class="clock">
+        <div class="min_hand"></div>
+        <div class="hour_hand"></div>
+        <div class="center"></div>
+
+    </div>
+</body>
+
+</html>
